@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhishek Krishna S— Portfolio</title>
+  <meta name="description" content="Cybersecurity Portfolio" />
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1120;
+      --muted:#9aa4b2;
+      --accent:#34d399;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+.profile img {
+  border-radius: 12px;
+  box-shadow: 0 0 15px #34d399;
+}
+
+
+     h2, h3 {
+  color: var(--accent);
+}
+
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#07101a 80%);
+      color:#e6eef6;
+      line-height:1.45;
+      padding-bottom:80px;
+    }
+    header{
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(5,10,15,0.6), rgba(5,10,15,0.25));
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      z-index:50;
+    }
+    .container{max-width:1000px;margin:0 auto;padding:18px;}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;}
+    .menu{display:flex;gap:14px;}
+    .menu a{color:var(--muted);text-decoration:none}
+    .menu a:hover{color:#fff}
+
+    .hero{display:flex;gap:28px;align-items:center;padding:48px 18px;}
+    .hero-left{flex:1}
+    .eyebrow{color:var(--accent);font-weight:600;margin-bottom:8px}
+    h1{font-size:2.1rem;margin:6px 0 10px}
+    p.lead{color:var(--muted);max-width:70%}
+
+    .hero-right{width:220px}
+    .profile{
+      width:220px;height:220px;border-radius:14px;overflow:hidden;
+      background:linear-gradient(135deg,#082b2a,#06203a);
+      display:flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,0.04)
+    }
+
+    section{max-width:1000px;margin:28px auto;padding:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+
+    .btn{padding:10px 14px;border-radius:10px;background:var(--accent);color:#042026;font-weight:700;text-decoration:none}
+    .muted{color:var(--muted)}
+
+    /* --------------------- CERTIFICATE SECTION ---------------------- */
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .cert-item {
+      background: var(--glass);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .cert-item:hover {
+      transform: scale(1.03);
+      border-color: var(--accent);
+    }
+
+    .cert-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Modal Popup */
+    #certModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+    }
+
+    .modal-content {
+      background: var(--card);
+      padding: 20px;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 420px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 26px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .cert-desc {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ---------------------------------------------------------------- */
+  </style>
+</head>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand ">ABHISHEK KRISHNA S</div>
+        <div class="menu">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#internships">Internships</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+<!-- ================= HERO SECTION ================== -->
+<section class="hero" style="display:flex; align-items:center; gap:40px; padding:40px 0;">
+
+  <!-- LEFT SIDE -->
+  <div class="hero-left" style="flex:1;">
+
+    <div class="eyebrow">Cyber Security Graduate</div>
+      <h1 style="white-space: nowrap;">Hi — I'm 
+  <span style="color:var(--accent)">ABHISHEK KRISHNA S</span>
+</h1>
+
+      I am a 23-year-old passionate cybersecurity enthusiast seeking a job and building a strong Cyber security career.
+    </p>
+
+    <!-- SOCIAL LINKS (LinkedIn, Gmail, Resume) -->
+    <div style="display:flex; gap:20px; align-items:center; margin-top:15px;">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/abhishek-krishna-s-610529307"
+         target="_blank"
+         style="text-decoration:none;color:#7fa1ff;display:flex;align-items:center;gap:8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#7fa1ff" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 
+          1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.083V6.169H2.542v6.914h2.401zm-1.2-7.876c.837 
+          0 1.358-.554 1.358-1.248-.015-.708-.52-1.248-1.342-1.248-.822 
+          0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 
+          7.876h2.4V9.359c0-.2.014-.399.073-.542.161-.399.527-.813 1.142-.813 
+          0 .001 0 .001 0 0 .807 0 1.13.614 1.13 1.515v3.564H15V9.25c0-2.072-1.104-3.036-2.576-3.036-1.189 
+          0-1.722.66-2.022 1.123v.024h-.016l.016-.024V6.169h-2.4c.03.66 
+          0 6.914 0 6.914z"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <!-- Gmail -->
+      <a href="mailto:kabhishek1170@gmail.com"
+         style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#7fa1ff;">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+             width="20" height="20" alt="Gmail Logo" />
+        Gmail
+      </a>
+
+      <!-- Resume -->
+      <a href="Resume/Resume_Abhishek_Krishna.pdf" target="_blank"
+         style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#7fa1ff;">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png"
+             width="20" height="20" alt="Resume Icon" />
+        Resume
+      </a>
+
+    </div>
+
+    <!-- CONTACT BUTTON -->
+    <p style="margin-top:15px;">
+      <a class="btn" href="#contact">Contact me</a>
+    </p>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+    
+    </div>
+  </div>
+
+</section>
+
+  
+    <!-- ================= ABOUT ================== -->
+    <section id="about" class="container">
+      <div class="card">
+        <h2>About</h2>
+        <p class="muted">
+          I am a passionate cybersecurity professional with a B.Tech in Cyber Security and Cyber Forensics from Srinivas Institute of Engineering and Technology, Mangalore. And also, I have completed Offenso ceritified security professional(OCSP) certification course from Offenso hackers academy,Kochi. Currently I am developing my skills in vulnerability assessment, cyber forensics , network security, ethical hacking. I am eager to apply my knowledge, learn from industry experts, and contribute to strengthening cybersecurity measures.
+        </p>
+<p>I am always open to learning, collaborating and exploring opportunities in cybersecurity. Let’s connect and collaborate!</p>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================== -->
+    <section id="education" class="container">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+         <h3>B.Tech Cybersecurity & Cyber Forensics</h3>
+            <p>Srinivas University of Engineering and Technology, Mangalore (2021–2025)</p>
+            <p>Graduated from Srinivas university of Engineering and Technology, Where i could gain basic knowledge of cybersecurity and cyber forensics.
+               This helped me to make my cyber security foundation more strong and also helped me gain engineering knowlegde. </p>
+         
+        </div>
+
+        <div class="card">
+          <h3>Ethical Hacking</h3>
+          <p>Avodha Edu.tech, Kochi (2025)</p>
+          <p>By attending Ethical hacking course from avodha, it gave me more deep level knwoledge about Ethical hacking and could understand more basics of cyber security
+               like networking basics,different protocols and also i got introduced to different cyber security tools. </p>
+
+        </div>
+
+        <div class="card">
+          <h3>OCSP Certification</h3>
+          <p>Offenso Hackers Academy,Kochi (2025)</p>
+          <p>OCSP from offenso hackers academy gave me more deep hands on experience on working of cyber security tools.I could gain experience on Information gathering tools,
+               Network scanning tools, Vulnerability analysis and also i could build my soc engagements experiances by using different defensive tools. </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================== -->
+    <section id="skills" class="container">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><li>Operating Systems:   Windows, Linux(kali , parrot)</li></div>
+<div class="card"><li>Technical Abilities:  Vulnerability Assessment, Penetration Testing, SOC Activities</li></div>
+<div class="card"><li>Network Technologies:  TCP/IP, UDP, DNS, OSI Layers</li></div>
+<div class="card"><li>Network & Web Application Security:  Nmap, Burp Suite, Metasploit, Wireshark, Nikto, Hydra</li></div>
+<div class="card"><li>Soc engagements:  SEIM Tools, splunk, System supportx</li></div>
+<div class="card"><li>Soft Skills:   Communication, Problem Solving, Research, Teamwork, Presentation, Adaptability</li></div>
+</div>
+</section>
+
+    <!-- ================= PROJECTS ================== -->
+    <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Boomslang Phishing Detector</h3>
+            <p>Proud to present Boomslang Phishing Detector,We focused on combating the growing threat of phishing attacks. Our system is designed to detect phishing URLs in real-time using a combination of machine learning and deep learning techniques.</p>
+
+<li>Key Features:</li>
+<li>Analyzed over 1 million URLs from open-source datasets</li>
+<li>Extracted 30+ features (lexical, content-based, and host-based)</li>
+<li>Implemented ML models: Random Forest, Logistic Regression</li>
+<li>Developed deep learning models: CNN, LSTM, and CNN-LSTM hybrid</li>
+<li>Designed a user-friendly interface for real-time phishing URL detection</li>
+
+<p>This project deepened our understanding of cybersecurity, threat analysis, feature engineering, and automation in phishing prevention,This also helped as in giving a phishing awarness to different category of people like normal citizens who are not more adavanced in technologies,company staffs, students etc.
+</p>
+        </div>
+    </div>
+</section>
+
+    <!-- ================= INTERNSHIPS ================== -->
+    <section id="internships" class="container">
+      <div class="card">
+        <h2>Internships</h2>
+        <div style="margin-top:8px">
+          <strong>2023 — Cyber Security Intern @ KAASHIV INFO.TECH, Chennai</strong>
+          <p class="muted">This internship provided hands-on exposure to core cybersecurity fundamentals, including threat analysis, system security practices, and network monitoring. I worked extensively with industry-standard security tools and performed practical tasks such as scanning, log analysis, and basic exploitation. Additionally, I gained experience using digital forensic toolkits to collect, analyse, and interpret evidence for investigative purposes.</p>
+        </div>
+
+<div style="margin-top:8px">
+          <strong>2024 — Cyber Security Intern @ ED INTERNS,Bangalore</strong>
+          <p class="muted">During this internship, I gained practical experience in vulnerability assessment, identifying weaknesses in systems and applications. I also engaged in SOC-related activities, learning how security operations are managed in real time.I could also develope a strong foundation in penetration testing fundamentals through hands-on tasks and tool usage.</p>
+        </div>
+
+
+    <!-- ================= CERTIFICATES ================== -->
+    <section id="certificates" class="container">
+      <h2>Certificates</h2>
+
+      <div class="cert-grid">
+
+        <!-- Certificate 1 -->
+        <div class="cert-item"
+          onclick="openCert('certs/Ocsp_abhishek.pdf',
+          'Completed OCSP certification, gaining hands-on experience in both offensive techniques such as reconnaissance, exploitation, and privilege escalation, as well as defensive skills including log analysis, SIEM monitoring, and threat detection.')">
+          <img src="certs/Ocsp_abhishek_page-0001.jpg">
+          <p>OCSP – Offenso Hackers Academy</p>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="cert-item"
+          onclick="openCert('certs/avodha_abhishek.pdf',
+          'Completed a hands-on ethical hacking training covering networking basics, reconnaissance, scanning, vulnerability analysis, and practical exposure to cybersecurity tools and attack methodologies.')">
+          <img src="certs/avodha_abhishek_page-0001.jpg">
+          <p>Avodha Ethical hacking</p>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="cert-item"
+          onclick="openCert('certs/SUIET_project_certificate.pdf',
+          'Secured Second Prize for presenting a well-designed cybersecurity project — Boomslang Phishing Detector — which used machine learning and deep learning models to identify phishing URLs with high accuracy, showcasing strong practical implementation, research, and teamwork.')">
+          <img src="certs/SUIET_project_certificate_page-0001.jpg">
+          <p>Project Exhibition</p>
+        </div>
+
+          <!-- Certificate 4 -->
+        <div class="cert-item"
+          onclick="openCert('certs/KaaShiv_Certificate_compressed.pdf',
+          'Gained real-time foundational experience in scanning, monitoring, and analysing system vulnerabilities during the cybersecurity internship at Kaashiv Infotech.')">
+          <img src="certs/KaaShiv_Certificate_compressed_page-0001.jpg">
+          <p>KaaShiv internship Certificate</p>
+        </div>
+
+
+          <!-- Certificate 5 -->
+        <div class="cert-item"
+          onclick="openCert('certs/ED interns certificate.pdf',
+          'Completed a cybersecurity internship that provided real-time exposure to core skills including information gathering, scanning techniques, and identifying basic security weaknesses.')">
+          <img src="certs/ED_interns_certificate_page-0001.jpg">
+          <p>ED internship Certificate</p>
+        </div>
+
+         
+           <!-- Certificate 6 -->
+        <div class="cert-item"
+          onclick="openCert('certs/Offenso_ctf_certificate.pdf',
+          'Engaged in Offenso Hacker Academy’s CTF event, applying practical skills in problem-solving, vulnerability analysis, and real-time attack scenarios.It also helped in gaining hands-on exposure to solving real-world cybersecurity challenges.')">
+          <img src="certs/Offenso_ctf_certificate_page-0001.jpg">
+          <p>CTF Participation</p>
+        </div>
+
+               <!-- Certificate 7 -->
+        <div class="cert-item"
+          onclick="openCert('certs/Deloitte certification.pdf',
+          'Finished Deloitte’s Cyber Security Job Simulation, developing skills in threat analysis, incident response, and security assessment tasks used in industry environments.')">
+          <img src="certs/Deloitte_certification_page-0001.jpg">
+          <p>Deloitte Certificate</p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- MODAL POPUP -->
+    <div id="certModal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeCert()">&times;</span>
+        <iframe id="certFrame" src=""></iframe>
+        <p id="certText" class="cert-desc"></p>
+      </div>
+    </div>
+
+<!-- ================= CONTACT ================== -->
+<section id="contact" class="container">
+  <div class="card">
+    <h2>Contact</h2>
+
+    <div style="margin-top:20px; line-height:1.8; color:var(--muted);">
+
+      <p><strong style="color:var(--accent);">📍 Location:</strong> Wayanad, Kerala, India</p>
+
+      <p><strong style="color:var(--accent);">📞 Phone:</strong> +91 8848116950</p>
+
+      <p><strong style="color:var(--accent);">📧 Email:</strong> kabhishek1170@gmail.com</p>
+
+      <p><strong style="color:var(--accent);">🌏 Nationality:</strong> Indian</p>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer style="text-align:center;color:var(--muted);margin-top:40px">
+    © <span id="year"></span> Abhishek Krishna — Built with ❤️
+  </footer>
+
+
+<!-- JS -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function openCert(url, desc) {
+    document.getElementById("certFrame").src = url;
+    document.getElementById("certText").textContent = desc;
+    document.getElementById("certModal").style.display = "flex";
+  }
+
+  function closeCert() {
+    document.getElementById("certModal").style.display = "none";
+    document.getElementById("certFrame").src = "";
+  }
+</script>
+
+</body>
+</html>
+
+
